@@ -1,4 +1,4 @@
-"""Run retrieval and compute MRR@10, Recall@10, and NDCG@10."""
+"""Evaluate saved retrieval results against qrels."""
 
 from __future__ import annotations
 
@@ -6,105 +6,67 @@ import argparse
 import json
 import math
 from pathlib import Path
-from typing import Any
-
-try:
-    from .bm25_retriever import BM25Retriever
-    from .dense_retriever import DEFAULT_MODEL, DenseRetriever
-    from .hybrid_retriever import HybridRetriever
-except ImportError:  # pragma: no cover - supports `python src/evaluate.py`
-    from bm25_retriever import BM25Retriever
-    from dense_retriever import DEFAULT_MODEL, DenseRetriever
-    from hybrid_retriever import HybridRetriever
 
 SearchResult = tuple[str, float]
+Runs = dict[str, list[SearchResult]]
 Qrels = dict[str, dict[str, float]]
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Evaluate retrieval over processed JSONL/TSV files.")
-    parser.add_argument("--corpus", default="data/processed/corpus.jsonl")
-    parser.add_argument("--queries", default="data/processed/queries.jsonl")
+    parser = argparse.ArgumentParser(description="Evaluate retrieval results.")
     parser.add_argument("--qrels", default="data/processed/qrels.tsv")
-    parser.add_argument("--retriever", choices=("bm25", "dense", "hybrid"), default="bm25")
-    parser.add_argument("--top-k", type=int, default=10, help="Evaluation cutoff.")
-    parser.add_argument("--candidate-k", type=int, default=100, help="Hybrid candidate pool size.")
-    parser.add_argument("--output", default="experiments/results/metrics.json")
-    parser.add_argument("--run-output", default=None, help="Optional JSONL file for ranked results.")
-    parser.add_argument("--model-name", default=DEFAULT_MODEL, help="SentenceTransformers model.")
-    parser.add_argument("--batch-size", type=int, default=32)
-    parser.add_argument("--device", default=None, help="Optional dense model device, e.g. cpu or cuda.")
-    parser.add_argument("--fusion", choices=("rrf", "linear"), default="rrf")
-    parser.add_argument("--sparse-weight", type=float, default=1.0)
-    parser.add_argument("--dense-weight", type=float, default=1.0)
-    parser.add_argument("--rrf-k", type=int, default=60)
+    parser.add_argument("--results", default="experiments/results/bm25_results.tsv")
+    parser.add_argument("--output", default="experiments/results/bm25_metrics.json")
+    parser.add_argument(
+        "--metric-prefix",
+        default="BM25",
+        help="Metric label prefix, e.g. BM25 or Dense.",
+    )
     return parser.parse_args()
-
-
-def read_jsonl(path: str | Path) -> list[dict[str, Any]]:
-    rows: list[dict[str, Any]] = []
-    with Path(path).open("r", encoding="utf-8") as handle:
-        for line in handle:
-            line = line.strip()
-            if line:
-                rows.append(json.loads(line))
-    return rows
 
 
 def read_qrels(path: str | Path) -> Qrels:
     qrels: Qrels = {}
     with Path(path).open("r", encoding="utf-8") as handle:
-        for line_idx, line in enumerate(handle):
+        for line_number, line in enumerate(handle, start=1):
             line = line.strip()
             if not line:
                 continue
             parts = line.split("\t")
-            if line_idx == 0 and parts[:3] == ["query_id", "doc_id", "relevance"]:
+            if line_number == 1 and parts[:3] == ["query_id", "doc_id", "relevance"]:
                 continue
-            if len(parts) < 3:
-                raise ValueError(f"Malformed qrels line {line_idx + 1}: {line}")
-            query_id, doc_id, relevance_text = parts[:3]
-            relevance = float(relevance_text)
-            qrels.setdefault(query_id, {})[doc_id] = relevance
+            if len(parts) >= 4 and parts[1].upper() == "Q0":
+                query_id, doc_id, relevance_text = parts[0], parts[2], parts[3]
+            elif len(parts) >= 3:
+                query_id, doc_id, relevance_text = parts[0], parts[1], parts[2]
+            else:
+                raise ValueError(f"Malformed qrels line {line_number}: {line}")
+            qrels.setdefault(query_id, {})[doc_id] = float(relevance_text)
     return qrels
 
 
-def build_retriever(args: argparse.Namespace, corpus: list[dict[str, Any]]):
-    if args.retriever == "bm25":
-        return BM25Retriever(corpus)
+def read_results(path: str | Path) -> Runs:
+    runs: dict[str, list[tuple[int, str, float]]] = {}
+    with Path(path).open("r", encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split("\t")
+            if line_number == 1 and parts[:4] == ["query_id", "doc_id", "rank", "score"]:
+                continue
+            if len(parts) >= 6 and parts[1].upper() == "Q0":
+                query_id, doc_id, rank_text, score_text = parts[0], parts[2], parts[3], parts[4]
+            elif len(parts) >= 4:
+                query_id, doc_id, rank_text, score_text = parts[0], parts[1], parts[2], parts[3]
+            else:
+                raise ValueError(f"Malformed results line {line_number}: {line}")
+            runs.setdefault(query_id, []).append((int(rank_text), doc_id, float(score_text)))
 
-    if args.retriever == "dense":
-        return DenseRetriever(
-            corpus,
-            model_name=args.model_name,
-            batch_size=args.batch_size,
-            device=args.device,
-        )
-
-    sparse = BM25Retriever(corpus)
-    dense = DenseRetriever(
-        corpus,
-        model_name=args.model_name,
-        batch_size=args.batch_size,
-        device=args.device,
-    )
-    return HybridRetriever(
-        sparse,
-        dense,
-        fusion=args.fusion,
-        sparse_weight=args.sparse_weight,
-        dense_weight=args.dense_weight,
-        rrf_k=args.rrf_k,
-        candidate_k=args.candidate_k,
-    )
-
-
-def run_retrieval(retriever, queries: list[dict[str, Any]], top_k: int) -> dict[str, list[SearchResult]]:
-    runs: dict[str, list[SearchResult]] = {}
-    for query in queries:
-        query_id = str(query["query_id"])
-        runs[query_id] = retriever.search(query.get("text", ""), top_k=top_k)
-    return runs
+    return {
+        query_id: [(doc_id, score) for _, doc_id, score in sorted(rows, key=lambda item: item[0])]
+        for query_id, rows in runs.items()
+    }
 
 
 def mrr_at_k(results: list[SearchResult], relevant_docs: dict[str, float], k: int) -> float:
@@ -140,68 +102,60 @@ def ndcg_at_k(results: list[SearchResult], relevant_docs: dict[str, float], k: i
     return dcg / idcg if idcg > 0.0 else 0.0
 
 
-def compute_metrics(runs: dict[str, list[SearchResult]], qrels: Qrels, k: int) -> dict[str, float]:
+def metric_name(metric_prefix: str, name: str) -> str:
+    prefix = metric_prefix.strip()
+    return f"{prefix} {name}" if prefix else name
+
+
+def compute_metrics(runs: Runs, qrels: Qrels, metric_prefix: str = "BM25") -> dict[str, float]:
     query_ids = sorted(qrels)
     if not query_ids:
-        return {f"MRR@{k}": 0.0, f"Recall@{k}": 0.0, f"NDCG@{k}": 0.0}
-
-    mrr = [mrr_at_k(runs.get(query_id, []), qrels[query_id], k) for query_id in query_ids]
-    recall = [recall_at_k(runs.get(query_id, []), qrels[query_id], k) for query_id in query_ids]
-    ndcg = [ndcg_at_k(runs.get(query_id, []), qrels[query_id], k) for query_id in query_ids]
+        return {
+            metric_name(metric_prefix, "MRR@10"): 0.0,
+            metric_name(metric_prefix, "Recall@10"): 0.0,
+            metric_name(metric_prefix, "NDCG@10"): 0.0,
+            metric_name(metric_prefix, "Recall@100"): 0.0,
+        }
 
     return {
-        f"MRR@{k}": sum(mrr) / len(query_ids),
-        f"Recall@{k}": sum(recall) / len(query_ids),
-        f"NDCG@{k}": sum(ndcg) / len(query_ids),
+        metric_name(metric_prefix, "MRR@10"): average(
+            mrr_at_k(runs.get(query_id, []), qrels[query_id], 10) for query_id in query_ids
+        ),
+        metric_name(metric_prefix, "Recall@10"): average(
+            recall_at_k(runs.get(query_id, []), qrels[query_id], 10) for query_id in query_ids
+        ),
+        metric_name(metric_prefix, "NDCG@10"): average(
+            ndcg_at_k(runs.get(query_id, []), qrels[query_id], 10) for query_id in query_ids
+        ),
+        metric_name(metric_prefix, "Recall@100"): average(
+            recall_at_k(runs.get(query_id, []), qrels[query_id], 100) for query_id in query_ids
+        ),
     }
 
 
-def write_run(path: str | Path, runs: dict[str, list[SearchResult]]) -> None:
-    output_path = Path(path)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    with output_path.open("w", encoding="utf-8") as handle:
-        for query_id, results in runs.items():
-            for rank, (doc_id, score) in enumerate(results, start=1):
-                handle.write(
-                    json.dumps(
-                        {
-                            "query_id": query_id,
-                            "doc_id": doc_id,
-                            "rank": rank,
-                            "score": score,
-                        },
-                        sort_keys=True,
-                    )
-                    + "\n"
-                )
+def average(values) -> float:
+    items = list(values)
+    return sum(items) / len(items) if items else 0.0
 
 
 def main() -> None:
     args = parse_args()
-    corpus = read_jsonl(args.corpus)
-    queries = read_jsonl(args.queries)
     qrels = read_qrels(args.qrels)
-
-    retriever = build_retriever(args, corpus)
-    runs = run_retrieval(retriever, queries, top_k=args.top_k)
-    metrics = compute_metrics(runs, qrels, k=args.top_k)
+    runs = read_results(args.results)
+    metrics = compute_metrics(runs, qrels, metric_prefix=args.metric_prefix)
 
     payload = {
-        "retriever": args.retriever,
-        "top_k": args.top_k,
-        "num_documents": len(corpus),
-        "num_queries": len(queries),
+        "qrels": args.qrels,
+        "results": args.results,
         "num_qrels_queries": len(qrels),
+        "num_result_queries": len(runs),
+        "metric_prefix": args.metric_prefix,
         "metrics": metrics,
     }
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-
-    if args.run_output:
-        write_run(args.run_output, runs)
-
     print(json.dumps(payload, indent=2, sort_keys=True))
 
 

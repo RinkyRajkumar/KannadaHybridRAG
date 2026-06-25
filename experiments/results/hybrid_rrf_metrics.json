@@ -1,0 +1,13 @@
+{
+  "metric_prefix": "Hybrid RRF",
+  "metrics": {
+    "Hybrid RRF MRR@10": 0.8632619047619048,
+    "Hybrid RRF NDCG@10": 0.8925758486311075,
+    "Hybrid RRF Recall@10": 0.98,
+    "Hybrid RRF Recall@100": 1.0
+  },
+  "num_qrels_queries": 100,
+  "num_result_queries": 100,
+  "qrels": "data\\processed\\qrels.tsv",
+  "results": "experiments\\results\\hybrid_rrf_results.tsv"
+}

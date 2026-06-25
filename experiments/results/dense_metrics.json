@@ -1,0 +1,13 @@
+{
+  "metric_prefix": "Dense",
+  "metrics": {
+    "Dense MRR@10": 0.9075952380952381,
+    "Dense NDCG@10": 0.9256737097364147,
+    "Dense Recall@10": 0.98,
+    "Dense Recall@100": 1.0
+  },
+  "num_qrels_queries": 100,
+  "num_result_queries": 100,
+  "qrels": "data\\processed\\qrels.tsv",
+  "results": "experiments\\results\\dense_results.tsv"
+}

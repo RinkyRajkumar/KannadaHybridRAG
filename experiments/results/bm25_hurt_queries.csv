@@ -1,0 +1,19 @@
+query_id,query_text,relevant_doc_id,BM25 rank,Dense rank,Hybrid RRF rank,best weighted fusion rank,best weighted fusion method
+10005,ಉಸಿರಾಟದ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಅಪಧಮನಿಗಳು ಏನು ಮಾಡುತ್ತವೆ,doc-9c8a0a64eefd6ce9,,1,2,1,weighted_minmax_alpha_0.0
+10007,ಇಎಂಜಿ ಪರೀಕ್ಷೆ ಏನು ?,doc-555085c66c6745a3,,1,3,1,weighted_minmax_alpha_0.0
+10071,ಶರೀರಶಾಸ್ತ್ರ ಎಂದರೇನು,doc-b10e178df21f9d44,,1,2,1,weighted_minmax_alpha_0.0
+10201,ಅಲಾಸ್ಕಾದಲ್ಲಿ ಚಳಿಗಾಲದಲ್ಲಿ ಸರಾಸರಿ ತಾಪಮಾನ,doc-5e763a5323f3b22d,5,1,2,1,weighted_minmax_alpha_0.0
+10253,ದೈತ್ಯ ಚಿಟ್ಟೆಗಳು ಎಲ್ಲಿಂದ ಬಂದವು?,doc-2603f2774de507c7,,4,5,4,weighted_minmax_alpha_0.0
+10258,ಹ್ಯಾರಡ್ಸ್ ಏನು,doc-f17aaa54c8c1cd07,,1,2,1,weighted_minmax_alpha_0.0
+10406,ಶೋಟೈಮ್ ರೋಟಿಸೆರಿಯಲ್ಲಿ ಹಂದಿ ಮಾಂಸದ ಚಾಪ್‌ಗಳನ್ನು ಎಷ್ಟು ಸಮಯ ಬೇಯಿಸಬೇಕು,doc-6bfce5829aca6187,,1,4,1,weighted_minmax_alpha_0.0
+10605,ಹೂವಿನ ಸಸ್ಯದಲ್ಲಿ ಎಪಿಡರ್ಮಿಸ್ ಏನು ಮಾಡುತ್ತದೆ,doc-61ab00409dd34401,,2,5,2,weighted_minmax_alpha_0.0
+10699,ಡಾನ್ ಬ್ರಾಡ್ಮನ್ ಅವರು ಎಲ್ಲಿ ಜನಿಸಿದರು,doc-60a03530f37caeee,3,1,2,1,weighted_minmax_alpha_0.0
+11716,ಒಂದು ತಿಂಗಳ ಬಾಲಕನಿಗೆ ಎಷ್ಟು ಪ್ರಮಾಣದ ಹಾಲು ಕುಡಿಸಬೇಕು,doc-befb0d84963f5ab6,,1,29,1,weighted_minmax_alpha_0.0
+12157,NRF2 ಆಕ್ಟಿವೇಟರ್ ಏನು,doc-263368468342e04f,,1,2,1,weighted_minmax_alpha_0.0
+12469,ಗಟರ್ ಗಾರ್ಡ್ ಖರ್ಚು ಎಷ್ಟು,doc-d3f2c492d639b3ea,,1,2,1,weighted_minmax_alpha_0.0
+12486,ವಂಚನೆಯ ವೆಚ್ಚ,doc-1b890cdbb1fe2f6b,,1,2,1,weighted_minmax_alpha_0.0
+12873,ಇಮ್ಯೂನೋಫಿಕ್ಸೇಶನ್ ಪರೀಕ್ಷೆ ಏನು?,doc-78b2451976975730,,1,2,1,weighted_minmax_alpha_0.0
+9691,ಸುಸ್ಥಿರತೆಯನ್ನು ಇದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆಯೂ ಉಲ್ಲೇಖಿಸಲಾಗುತ್ತದೆ,doc-93a0a9a95b2871d0,,1,2,1,weighted_minmax_alpha_0.0
+9724,ಪೂರ್ವ ಕ್ಯಾನ್ಸರ್ ಚರ್ಮ ಕ್ಯಾನ್ಸರ್‌ನ ಪ್ರಕಾರಗಳು,doc-5631283746b4487a,,1,5,1,weighted_minmax_alpha_0.0
+9821,ಸ್ಕ್ವಿರಲ್ ಮಂಕಿ ಯಾವ ಗುಂಪಿಗೆ ಸೇರಿದೆ,doc-f5841a4f496dbda9,,1,2,1,weighted_minmax_alpha_0.0
+9892,ಕೊಸೈನ್ ಸಮೀಕರಣದಲ್ಲಿ ವ್ಯಾಪ್ತಿ ಎಂದರೇನು,doc-85d8e85c8c989100,,15,16,15,weighted_minmax_alpha_0.0

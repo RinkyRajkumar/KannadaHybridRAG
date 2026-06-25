@@ -1,0 +1,20 @@
+{
+  "BM25": {
+    "BM25 MRR@10": 0.7186666666666666,
+    "BM25 NDCG@10": 0.7365956826934277,
+    "BM25 Recall@10": 0.79,
+    "BM25 Recall@100": 0.79
+  },
+  "Dense": {
+    "Dense MRR@10": 0.9075952380952381,
+    "Dense NDCG@10": 0.9256737097364147,
+    "Dense Recall@10": 0.98,
+    "Dense Recall@100": 1.0
+  },
+  "Hybrid RRF": {
+    "Hybrid RRF MRR@10": 0.8632619047619048,
+    "Hybrid RRF NDCG@10": 0.8925758486311075,
+    "Hybrid RRF Recall@10": 0.98,
+    "Hybrid RRF Recall@100": 1.0
+  }
+}

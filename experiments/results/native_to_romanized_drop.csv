@@ -1,0 +1,55 @@
+query_id,native_query,romanized_query,mixed_query,relevant_doc_id,BM25 rank,Dense rank,Hybrid RRF rank,Best weighted fusion rank
+10005,ಉಸಿರಾಟದ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಅಪಧಮನಿಗಳು ಏನು ಮಾಡುತ್ತವೆ,usiraatada vyavastheyalli apadhamanigalu eenu maaduttave,usiraatada ವ್ಯವಸ್ಥೆಯಲ್ಲಿ apadhamanigalu ಏನು maaduttave,doc-9c8a0a64eefd6ce9,,30,30,30
+10029,ಮಾನವ ಕಣ್ಣು ಗ್ರಹಿಸಬಹುದಾದ ಅತಿ ಚಿಕ್ಕ ಕಣದ ಗಾತ್ರ ಎಷ್ಟು,maanava kannu grahisabahudaada ati chikka kanada gaatra eshtu,maanava ಕಣ್ಣು grahisabahudaada ಅತಿ chikka ಕಣದ gaatra ಎಷ್ಟು,doc-5653d8ebd9c49f5b,,14,14,14
+10055,ಪೋಷಕರನ್ನು ಅವಲಂಬಿತರಾಗಿ ಹಕ್ಕು ಸಾಧಿಸುವ ಸಮಯ,posakarannu avalambitaragi hakku sadhisuva samaya,posakarannu ಅವಲಂಬಿತರಾಗಿ hakku ಸಾಧಿಸುವ samaya,doc-9b4625f96a64ee0a,,75,75,75
+10071,ಶರೀರಶಾಸ್ತ್ರ ಎಂದರೇನು,shariirashaastra emdareenu,shariirashaastra ಎಂದರೇನು,doc-b10e178df21f9d44,,16,16,16
+10127,PEI ಯಲ್ಲಿ ಜುಲೈ ತಿಂಗಳಲ್ಲಿ ಸರಾಸರಿ ಉಷ್ಣಾಂಶ ಎಷ್ಟು?,pei yalli julai timgalalli saraasari ushnaamsha eshtu?,pei ಯಲ್ಲಿ julai ತಿಂಗಳಲ್ಲಿ saraasari ಉಷ್ಣಾಂಶ eshtu?,doc-40e6b0a653dfbab4,,92,92,92
+10137,ಚಿಕ್ಕ ಮನೆ ನಾನು ಮಾಡ್ಯುಲರ್ ಮನೆಯನ್ನು ಪರಿವರ್ತಿಸಬಹುದೇ,chikka mane naanu maadyular maneyannu parivartisabahudee,chikka ಮನೆ naanu ಮಾಡ್ಯುಲರ್ maneyannu ಪರಿವರ್ತಿಸಬಹುದೇ,doc-0cc75c1cd1e762f0,,25,25,25
+10151,ಎಂಎಸ್‌ಜಿ ಅನಾರೋಗ್ಯಕರವಾಗಿರುವುದಕ್ಕೆ ಕಾರಣವೇನು?,emesji anaaroogyakaravaagiruvudakke kaaranaveenu?,emesji ಅನಾರೋಗ್ಯಕರವಾಗಿರುವುದಕ್ಕೆ kaaranaveenu?,doc-de9f1a76beddefa5,,31,31,31
+10242,ಸರ್ಪೆಂಟೈನ್ ಮಣ್ಣು ಎಂದರೇನು?,sarpemtain mannu emdareenu?,sarpemtain ಮಣ್ಣು emdareenu?,doc-f7722c0505e959c3,,33,33,33
+10253,ದೈತ್ಯ ಚಿಟ್ಟೆಗಳು ಎಲ್ಲಿಂದ ಬಂದವು?,daitya chittegalu ellimda bamdavu?,daitya ಚಿಟ್ಟೆಗಳು ellimda ಬಂದವು?,doc-2603f2774de507c7,,29,29,29
+10276,ಹೊಟ್ಟೆಯು ಆಹಾರವನ್ನು ಜೀರ್ಣಿಸುತ್ತದೆಯೇ?,hotteyu aahaaravannu jiirnisuttadeyee?,hotteyu ಆಹಾರವನ್ನು jiirnisuttadeyee?,doc-a6d7c36db2b9fc44,,41,41,41
+10300,ಲ್ಯಾಕ್ಟೇಸ್ ಎಲ್ಲಿಂದ ಬರುತ್ತದೆ,lyaaktees ellimda baruttade,lyaaktees ಎಲ್ಲಿಂದ baruttade,doc-5d2bd393f1aa2dd7,,16,16,16
+10310,ವಿರಾಮ ಮುಂಚೆ ಕೆಲಸ ಮಾಡಲು ಅನುಮತಿಸಲಾದ ಗರಿಷ್ಠ ಗಂಟೆಗಳು,viraama mumche kelasa maadalu anumatisalaada garishtha gamtegalu,viraama ಮುಂಚೆ kelasa ಮಾಡಲು anumatisalaada ಗರಿಷ್ಠ gamtegalu,doc-0bdc29a62f6c7fc8,,64,64,64
+10311,ಪಾಪುವಾ ನ್ಯೂ ಗಿನಿಯ ಮೂಲ ಎಲ್ಲಿದೆ?,paapuvaa nyuu giniya muula ellide?,paapuvaa ನ್ಯೂ giniya ಮೂಲ ellide?,doc-c3f766b0d2f27d98,,27,27,27
+10329,ನ್ಯೂ ಜೆರ್ಸಿಯಲ್ಲಿ ರಿಕವರಿ ಕೋಚ್ ಎಷ್ಟು ಸಂಪಾದಿಸಬಹುದು,nyuu jersiyalli rikavari kooch eshtu sampaadisabahudu,nyuu ಜೆರ್ಸಿಯಲ್ಲಿ rikavari ಕೋಚ್ eshtu ಸಂಪಾದಿಸಬಹುದು,doc-368d585e959425be,,21,21,21
+10356,ಯಾವ ಸರ್ಕಾರದ ಶಾಖೆಯು ಕಾನೂನುಗಳನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುವ ಜವಾಬ್ದಾರಿಯನ್ನು ಹೊಂದಿದೆ,yaava sarkaarada shaakheyu kaanuunugalannu vyaakhyaanisuva javaabdaariyannu homdide,yaava ಸರ್ಕಾರದ shaakheyu ಕಾನೂನುಗಳನ್ನು vyaakhyaanisuva ಜವಾಬ್ದಾರಿಯನ್ನು homdide,doc-491ad0d7a59984bd,,99,99,99
+10406,ಶೋಟೈಮ್ ರೋಟಿಸೆರಿಯಲ್ಲಿ ಹಂದಿ ಮಾಂಸದ ಚಾಪ್‌ಗಳನ್ನು ಎಷ್ಟು ಸಮಯ ಬೇಯಿಸಬೇಕು,shootaim rootiseriyalli hamdi maamsada chaapgalannu eshtu samaya beeyisabeeku,shootaim ರೋಟಿಸೆರಿಯಲ್ಲಿ hamdi ಮಾಂಸದ chaapgalannu ಎಷ್ಟು samaya ಬೇಯಿಸಬೇಕು,doc-6bfce5829aca6187,,14,14,14
+10450,ಟಾಸ್ ಎಂದರೇನು,taas emdareenu,taas ಎಂದರೇನು,doc-036fdbb06c478f12,,43,43,43
+10501,ಶಕ್ತಿ ಎಂಜಿನಿಯರ್ ಆಗಲು ಯಾವ ಪದವಿ ಅಗತ್ಯವಿದೆ,shakti emjiniyar aagalu yaava padavi agatyavide,shakti ಎಂಜಿನಿಯರ್ aagalu ಯಾವ padavi ಅಗತ್ಯವಿದೆ,doc-3e7f8b736adab609,,41,41,41
+10521,ಜೈವಿಕ ವೈದ್ಯಕೀಯ ನೀತಿಶಾಸ್ತ್ರ ಏನು ?,jaivika vaidyakiiya niitishaastra eenu ?,jaivika ವೈದ್ಯಕೀಯ niitishaastra ಏನು ?,doc-2242399fb2d0fa30,,32,32,32
+10524,ಆಲ್ಕೋಹಾಲ್‌ನಿಂದ ಲಿವರ್ ಸಮಸ್ಯೆಗಳ ಲಕ್ಷಣಗಳೇನು?,aalkoohaalnimda livar samasyegala lakshanagaleenu?,aalkoohaalnimda ಲಿವರ್ samasyegala ಲಕ್ಷಣಗಳೇನು?,doc-648bdeb258291f32,,12,12,12
+10605,ಹೂವಿನ ಸಸ್ಯದಲ್ಲಿ ಎಪಿಡರ್ಮಿಸ್ ಏನು ಮಾಡುತ್ತದೆ,huuvina sasyadalli epidarmis eenu maaduttade,huuvina ಸಸ್ಯದಲ್ಲಿ epidarmis ಏನು maaduttade,doc-61ab00409dd34401,,39,39,39
+10646,ಸರಾಸರಿ ವ್ಯಕ್ತಿ ಎಷ್ಟು ಗಂಟೆಗಳ ಕಾಲ ಸ್ವಯಂಸೇವೆ ಮಾಡುತ್ತಾನೆ,saraasari vyakti eshtu gamtegala kaala svayamseeve maaduttaane,saraasari ವ್ಯಕ್ತಿ eshtu ಗಂಟೆಗಳ kaala ಸ್ವಯಂಸೇವೆ maaduttaane,doc-14c0a27f97c18e08,,49,49,49
+10649,ನನ್ನ ಮೆದುಳನ್ನು ಹೇಗೆ ಪ್ರಚೋದಿಸುವುದು,nanna medulannu heege prachoodisuvudu,nanna ಮೆದುಳನ್ನು heege ಪ್ರಚೋದಿಸುವುದು,doc-ec51a0bf6e5de09d,,19,19,19
+10659,ನಿಕಾರಾಗುವಾ ನಕ್ಷೆಯಲ್ಲಿ ಎಲ್ಲಿದೆ?,nikaaraaguvaa naksheyalli ellide?,nikaaraaguvaa ನಕ್ಷೆಯಲ್ಲಿ ellide?,doc-c01e63b6735fbc8c,,86,86,86
+10715,ನಿಮ್ಮ ದೇಹದ ಪ್ರಾಥಮಿಕ ಶಕ್ತಿಯ ಮೂಲವಾಗಿರುವ ಕಾರ್ಬೋಹೈಡ್ರೇಟ್‌ಗಳೇನು?,nimma deehada praathamika shaktiya muulavaagiruva kaarboohaidreetgaleenu?,nimma ದೇಹದ praathamika ಶಕ್ತಿಯ muulavaagiruva ಕಾರ್ಬೋಹೈಡ್ರೇಟ್‌ಗಳೇನು?,doc-0081e300f0c5403c,,14,14,14
+10765,ನಾಯಿಗೆ ಎಷ್ಟು ನೀರು ಕುಡಿಸಬೇಕು,naayige eshtu niiru kudisabeeku,naayige ಎಷ್ಟು niiru ಕುಡಿಸಬೇಕು,doc-9785f9936104288c,,15,15,15
+10978,ಒಂದು ಪ್ರಮಾಣಿತ ಸಾಮಾನ್ಯ ವಿತರಣೆಯಲ್ಲಿ ಸರಾಸರಿ,omdu pramaanita saamaanya vitaraneyalli saraasari,omdu ಪ್ರಮಾಣಿತ saamaanya ವಿತರಣೆಯಲ್ಲಿ saraasari,doc-2128a4216d980fb0,,80,80,80
+11290,ಟುಂಡ್ರಾದ ಪರಾಕಾಷ್ಠೆ ಸಸ್ಯವರ್ಗ ಏನು,tumdraada paraakaashthe sasyavarga eenu,tumdraada ಪರಾಕಾಷ್ಠೆ sasyavarga ಏನು,doc-4e72fa5c1199271e,,62,62,62
+11583,ಸರಾಸರಿ ವೇತನ ನಾನ್ ಇನ್ವೇಸಿವ್ ಹೃದಯರೋಗ ತಜ್ಞ,sarasari vetana nan invesiv hrdayaroga tajja,sarasari ವೇತನ nan ಇನ್ವೇಸಿವ್ hrdayaroga ತಜ್ಞ,doc-56692af771d1c18a,,45,45,45
+11739,ಡೆಂಟ್ ಅನ್ನು ಹೊರತೆಗೆಯಲು ಎಷ್ಟು ಖರ್ಚಾಗುತ್ತದೆ,demt annu horategeyalu eshtu kharchaaguttade,demt ಅನ್ನು horategeyalu ಎಷ್ಟು kharchaaguttade,doc-406612505a0b0b9f,,12,12,12
+11804,ಬರ್ಪೀ ಯ ವ್ಯಾಖ್ಯಾನ,barpi ya vyakhyana,barpi ಯ vyakhyana,doc-90d3b26e2f635f51,,12,12,12
+11870,ಆವಾಸ ವಿಜ್ಞಾನದ ವ್ಯಾಖ್ಯಾನ,avasa vijjanada vyakhyana,avasa ವಿಜ್ಞಾನದ vyakhyana,doc-d0b1dd17b184c71c,,52,52,52
+11937,ಔಷಧಿ ತಂತ್ರಜ್ಞರ ವೇತನ,ausadhi tamtrajjara vetana,ausadhi ತಂತ್ರಜ್ಞರ vetana,doc-db59382f2a64667d,,100,100,100
+11980,ಕ್ಲಾಗ್ ಔಟ್ ಏನನ್ನು ಹೊಂದಿದೆ,klaag aut eenannu homdide,klaag ಔಟ್ eenannu ಹೊಂದಿದೆ,doc-ff5908f80fde40b7,,17,17,17
+12188,ಪ್ಯಾರಿಸ್ ಒಪ್ಪಂದಕ್ಕೆ ಸಹಿ ಹಾಕಿದ್ದರೆ ಏನಾಗಬಹುದಿತ್ತು,pyaaris oppamdakke sahi haakiddare eenaagabahudittu,pyaaris ಒಪ್ಪಂದಕ್ಕೆ sahi ಹಾಕಿದ್ದರೆ eenaagabahudittu,doc-27fa34d8322e71c8,,74,74,74
+12207,ಒಬಾಮಾಕೇರ್‌ಗಾಗಿ ಮನೆಯ ಆದಾಯವೆಂದು ಏನನ್ನು ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ,obaamaakeergaagi maneya aadaayavemdu eenannu pariganisalaaguttade,obaamaakeergaagi ಮನೆಯ aadaayavemdu ಏನನ್ನು pariganisalaaguttade,doc-be8786dc770dcdda,,25,25,25
+12250,ದ್ವೀಪಗಳಲ್ಲಿ ಹೇಲಿಯಾಕಲಾ ಎಲ್ಲಿದೆ,dviipagalalli heeliyaakalaa ellide,dviipagalalli ಹೇಲಿಯಾಕಲಾ ellide,doc-463b3510c3cef8b8,,95,95,95
+12486,ವಂಚನೆಯ ವೆಚ್ಚ,vamchaneya vechcha,vamchaneya ವೆಚ್ಚ,doc-1b890cdbb1fe2f6b,,21,21,21
+12487,ಉನ್ನತ ಕಾರ್ಯನಿರ್ವಾಹಕರಾಗಲು ಯಾವ ಶಿಕ್ಷಣದ ಅಗತ್ಯವಿದೆ,unnata kaaryanirvaahakaraagalu yaava shikshanada agatyavide,unnata ಕಾರ್ಯನಿರ್ವಾಹಕರಾಗಲು yaava ಶಿಕ್ಷಣದ agatyavide,doc-d3f9bca9c8f7e038,,77,77,77
+12516,ಸರಾಸರಿ ಇಂಟರ್ನೆಟ್ ವೆಚ್ಚವು ತಿಂಗಳಿಗೆ ಎಷ್ಟು?,saraasari imtarnet vechchavu timgalige eshtu?,saraasari ಇಂಟರ್ನೆಟ್ vechchavu ತಿಂಗಳಿಗೆ eshtu?,doc-167395d44df300fe,,43,43,43
+12565,ಸರ್ಕಾರಗಳ ನಡುವಿನ ಸಂಬಂಧಗಳು ಏನು ?,sarkaaragala naduvina sambamdhagalu eenu ?,sarkaaragala ನಡುವಿನ sambamdhagalu ಏನು ?,doc-6f3c7c5898547879,,62,62,62
+12573,ವಲ್ಲಾಹಿ ಅಜೀಮ್ ಎಂದರೇನು,vallaahi ajiim emdareenu,vallaahi ಅಜೀಮ್ emdareenu,doc-918d9ca1fc30b042,,38,38,38
+9691,ಸುಸ್ಥಿರತೆಯನ್ನು ಇದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆಯೂ ಉಲ್ಲೇಖಿಸಲಾಗುತ್ತದೆ,susthirateyannu idakke sambamdhisidamteyuu ulleekhisalaaguttade,susthirateyannu ಇದಕ್ಕೆ sambamdhisidamteyuu ಉಲ್ಲೇಖಿಸಲಾಗುತ್ತದೆ,doc-93a0a9a95b2871d0,,13,13,13
+9697,ಮಾನಸಿಕ ಅಗತ್ಯದ ಉದಾಹರಣೆ ಏನು?,maanasika agatyada udaaharane eenu?,maanasika ಅಗತ್ಯದ udaaharane ಏನು?,doc-7a032428a3e9b53b,,63,63,63
+9710,ರೆಡ್‌ವುಡ್ ಮರವು ಎಷ್ಟು ಎತ್ತರವಿದೆ,redvud maravu eshtu ettaravide,redvud ಮರವು eshtu ಎತ್ತರವಿದೆ,doc-56568b6ac823c4cb,,47,47,47
+9723,ಶಿಶುಗಳು ಎಷ್ಟು ಚಿಕ್ಕ ವಯಸ್ಸಿನಲ್ಲಿ ಹಲ್ಲು ಬರುವುದನ್ನು ಪ್ರಾರಂಭಿಸುತ್ತವೆ,shishugalu eshtu chikka vayassinalli hallu baruvudannu praarambhisuttave,shishugalu ಎಷ್ಟು chikka ವಯಸ್ಸಿನಲ್ಲಿ hallu ಬರುವುದನ್ನು praarambhisuttave,doc-e0b67ba97343829f,,15,15,15
+9724,ಪೂರ್ವ ಕ್ಯಾನ್ಸರ್ ಚರ್ಮ ಕ್ಯಾನ್ಸರ್‌ನ ಪ್ರಕಾರಗಳು,puurva kyaansar charma kyaansarna prakaaragalu,puurva ಕ್ಯಾನ್ಸರ್ charma ಕ್ಯಾನ್ಸರ್‌ನ prakaaragalu,doc-5631283746b4487a,,18,18,18
+9731,ಪೂರ್ಣ ರಕ್ತ ಎಣಿಕೆಗೆ ಸಾಮಾನ್ಯ ಶ್ರೇಣಿ,puurna rakta enikege saamaanya shreeni,puurna ರಕ್ತ enikege ಸಾಮಾನ್ಯ shreeni,doc-b74f824b9bff1f8f,,48,48,48
+9755,ಯಾವ ನರಕೋಶವು ಬೆಳಕಿನಲ್ಲಿ ನರಸಂವೇದಕಗಳನ್ನು ಸ್ರವಿಸುತ್ತದೆ,yaava narakooshavu belakinalli narasamveedakagalannu sravisuttade,yaava ನರಕೋಶವು belakinalli ನರಸಂವೇದಕಗಳನ್ನು sravisuttade,doc-dee6223b3990015e,,43,43,43
+9821,ಸ್ಕ್ವಿರಲ್ ಮಂಕಿ ಯಾವ ಗುಂಪಿಗೆ ಸೇರಿದೆ,skviral mamki yaava gumpige seeride,skviral ಮಂಕಿ yaava ಗುಂಪಿಗೆ seeride,doc-f5841a4f496dbda9,,53,53,53
+9859,ಇಲಿನಾಯ್ಸ್‌ನಲ್ಲಿ LPN ಗಂಟೆಗೆ ಎಷ್ಟು ಸಂಪಾದಿಸುತ್ತದೆ,ilinaaysnalli lpn gamtege eshtu sampaadisuttade,ilinaaysnalli LPN gamtege ಎಷ್ಟು sampaadisuttade,doc-6717224309415d79,,12,12,12
+9869,ಅನಂದಿ ಹೆಸರಿನ ಅರ್ಥ,anamdi hesarina artha,anamdi ಹೆಸರಿನ artha,doc-ab73ac43b6251bb7,,14,14,14
+9974,ರಕ್ತದಲ್ಲಿ ನಿಕೋಟಿನ್ ಎಷ್ಟು ಕಾಲ ಪತ್ತೆಯಾಗುತ್ತದೆ,raktadalli nikootin eshtu kaala patteyaaguttade,raktadalli ನಿಕೋಟಿನ್ eshtu ಕಾಲ patteyaaguttade,doc-46693ff451d479bf,,11,11,11
+9999,ವಿದ್ಯಾರ್ಥಿ ವಸತಿಗಳ ಖರ್ಚು ಎಷ್ಟು,vidyaarthi vasatigala kharchu eshtu,vidyaarthi ವಸತಿಗಳ kharchu ಎಷ್ಟು,doc-4d143f69ba4fd62f,,14,14,14
